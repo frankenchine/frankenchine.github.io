@@ -25,7 +25,7 @@ A **Shanghai-based Full-stack Engineer** with a deep background in **Fintech**. 
 **agent4j** 是我发起的一个针对 Java 开发者的 AI Agent 框架。
 
 * **痛点场景：** 既然大多数金融和传统企业系统都运行在 Java 之上，为什么 Agent 的实现却被 Python/JS 垄断？
-* **解决方案：** `agent4j` 提供了一套原生 Java 实现的 Agent SDK，支持链式调用、插件化工具集成和复杂的业务流程编排,是一个轻量级的agents sdk。
+* **解决方案：** `agent4j` 提供了一套原生 Java 实现的 Agent SDK，支持链式调用、插件化工具集成和复杂的业务流程编排，是一个轻量级的agents sdk。
 * **目标：** 成为 Java 版的 LangChain/AutoGPT，专注于生产环境的稳定与性能。
 
 ---
@@ -48,13 +48,6 @@ A **Shanghai-based Full-stack Engineer** with a deep background in **Fintech**. 
 | **AI Frameworks** | **agent4j (Creator)**, LLM Integration (OpenAI/DeepSeek/Local LLMs) |
 | **Backend** | Spring Boot/Cloud, JVM Tuning, Financial Security Standards |
 | **Frontend** | Vue 3, Vite, Pinia, Element Plus |
-
----
-
-## 📈 GitHub Stats
-
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=frankenchine&show_icons=true&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=frankenchine&layout=compact&theme=radical)
 
 ---
 
