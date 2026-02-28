@@ -1,4 +1,4 @@
-# Hi there, I'm [Frank] 👋
+# Hi there, I'm Frank in Shanghai 👋
 
 > **Full-stack Engineer | Fintech Expert | Creator of [agent4j](https://github.com/agent4java/agent4j)**
 
