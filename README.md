@@ -56,6 +56,7 @@ A **Shanghai-based Full-stack Engineer** with a deep background in **Fintech**. 
 * **GitHub:** [@agent4java](https://github.com/agent4java)/[@frankenchine](https://github.com/frankenchine)
 * **Project:** [agent4j - The Java-native Agent Framework](https://github.com/agent4java/agent4j)
 * **Email:** agent4j@sina.com
+* **Wechat/微信:** Mybabys20212024
 
 ---
 > "Empowering Java with Intelligence, one Agent at a time."
