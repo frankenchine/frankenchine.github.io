@@ -1,0 +1,17 @@
+- name: agent4j
+  url: https://github.com/agent4java/agent4j
+  desc: "Java-native AI Agent SDK for production workflows."
+  tags: ["java", "agents", "llm", "sdk"]
+  highlights:
+    - "Plugin-oriented tools + workflow orchestration"
+    - "Designed for enterprise stability/perf"
+  status: active
+  featured: true
+
+- name: frankenchine.github.io
+  url: https://github.com/frankenchine/frankenchine.github.io
+  desc: "My GitHub Pages blog: Projects · AI Weekly · About."
+  tags: ["jekyll", "github-pages", "markdown"]
+  status: active
+  featured: true
+

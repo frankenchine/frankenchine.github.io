@@ -1,0 +1,25 @@
+title: Frank in Shanghai
+description: "Full-stack Engineer (Fintech) · Java & Vue · Creator of agent4j"
+url: "https://frankenchine.github.io"
+baseurl: ""
+
+theme: minima
+plugins:
+  - jekyll-seo-tag
+
+lang: zh-CN
+timezone: Asia/Shanghai
+
+minima:
+  skin: auto
+
+header_pages:
+  - weekly.md
+  - projects.md
+  - about.md
+
+show_excerpts: true
+excerpt_separator: "<!--more-->"
+
+permalink: /:categories/:year-:month-:day/:title/
+

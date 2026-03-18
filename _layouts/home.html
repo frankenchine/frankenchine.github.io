@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<div class="home">
+  <header class="hero">
+    <h1 class="hero__title">{{ site.title }}</h1>
+    <p class="hero__subtitle">{{ site.description }}</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a class="btn" href="{{ '/weekly/' | relative_url }}">AI Weekly</a>
+      <a class="btn" href="{{ '/about/' | relative_url }}">About</a>
+    </div>
+  </header>
+
+  <div class="grid">
+    <section class="card">
+      <div class="card__header">
+        <h2>Projects</h2>
+        <a class="muted" href="{{ '/projects/' | relative_url }}">View all</a>
+      </div>
+
+      {% assign featured = site.data.projects | where: "featured", true %}
+      {% if featured and featured.size > 0 %}
+        <ul class="list">
+          {% for p in featured limit: 6 %}
+            <li class="list__item">
+              <div class="list__title">
+                <a href="{{ p.url }}" target="_blank" rel="noreferrer noopener">{{ p.name }}</a>
+                {% if p.status %}
+                  <span class="pill pill--{{ p.status | escape }}">{{ p.status }}</span>
+                {% endif %}
+              </div>
+              {% if p.desc %}<div class="muted">{{ p.desc }}</div>{% endif %}
+              {% if p.tags %}
+                <div class="tags">
+                  {% for t in p.tags limit: 6 %}
+                    <span class="tag">{{ t }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">No featured projects yet. Edit <code>_data/projects.yml</code> to add them.</p>
+      {% endif %}
+    </section>
+
+    <section class="card">
+      <div class="card__header">
+        <h2>AI Weekly</h2>
+        <a class="muted" href="{{ '/weekly/' | relative_url }}">More</a>
+      </div>
+
+      {% assign weekly_posts = site.categories.weekly %}
+      {% if weekly_posts and weekly_posts.size > 0 %}
+        <ul class="list">
+          {% for post in weekly_posts limit: 6 %}
+            <li class="list__item">
+              <div class="list__title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </div>
+              <div class="muted">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+                {% if post.excerpt %} · {{ post.excerpt | strip_html | strip_newlines | truncate: 120 }}{% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="muted">No weekly posts yet. Add a Markdown file under <code>_posts/</code> with category <code>weekly</code>.</p>
+      {% endif %}
+    </section>
+
+    <section class="card card--wide">
+      <div class="card__header">
+        <h2>About</h2>
+        <a class="muted" href="{{ '/about/' | relative_url }}">Read more</a>
+      </div>
+
+      {% assign about_page = site.pages | where: "path", "about.md" | first %}
+      {% if about_page and about_page.summary %}
+        <p>{{ about_page.summary }}</p>
+      {% else %}
+        <p class="muted">Add an <code>about.md</code> with a <code>summary</code> field in front matter.</p>
+      {% endif %}
+    </section>
+  </div>
+
+  {{ content }}
+</div>
+
